@@ -1,0 +1,77 @@
+.flower {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0; }
+
+.wrapper {
+  position: relative; }
+
+.card {
+  height: 10rem;
+  width: 10rem;
+  font-size: 1.4rem;
+  box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #484e4a;
+  box-shadow: 3rem 4rem 6rem rgba(142, 137, 192, 0.5);
+  border-radius: 2px;
+  position: absolute;
+  top: 7rem;
+  left: 10rem; }
+
+.page {
+  width: 100%;
+  height: 17rem;
+  perspective: 1500px;
+  object-fit: cover;
+  box-shadow: -1rem -1rem 5rem rgba(142, 137, 192, 0.25); }
+  .page__1 {
+    background-color: #fff;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 1s .3s;
+    transform-origin: 0 50%;
+    z-index: 2; }
+    .page__1::after {
+      content: "Today at Wegmans a bunch of frantic last-minuters were crowding the card isle";
+      color: #eff0eb;
+      position: absolute;
+      padding-top: 1.5rem;
+      top: 0;
+      left: 0;
+      background: #ffb202;
+      background: linear-gradient(to bottom, #ffb202 0%, #e1b5ff 70%);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transform: rotateY(180deg);
+      transition: all .3s .5s;
+      box-shadow: -1rem -1rem 5rem rgba(142, 137, 192, 0.25); }
+  .page__2 {
+    background: #ffb202;
+    background: linear-gradient(to bottom, #ffb202 0%, #e1b5ff 70%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; }
+  .page:active .page__1 {
+    transform: rotateY(-180deg);
+    box-shadow: 1.5rem 2rem 3rem rgba(142, 137, 192, 0.25); }
+    .page:active .page__1::after {
+      opacity: 1; }
+
+.bottom {
+  color: black;
+  z-index: 3;
+  position: absolute;
+  bottom: 25px; }
